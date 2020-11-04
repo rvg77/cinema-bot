@@ -1,55 +1,30 @@
-# Cinema Bot
-Боты - это просто, но интересно. Боты для Телеграма, использующие готовые библиотеки для работы с API - вдвойне просто, но все так же интересно!
+# Cinema Bot (@cinema_rvg_bot)
 
-Мы предагаем вам почувствовать себя разработчиком "искусственного интеллекта" (скорее искуственного, нежели интеллекта :)), который
-поможет скоротать длинные вечера перед компьютером. А именно - будет искать информацию о фильмах и сериалах и давать ссылки для просмотра
-(мы не поддерживаем пиратство, ага-ага, поэтому предполагаем, что ссылки будут вести на онлайн кинотеатры, хотя
-кого я обманываю - первая ссылка гугла тоже пойдет).
+Cinema Bot is a python Telegram bot, which can help you to find:
+* Info about movie
+* Places to watch a movie
 
-## Условие
-1. Итак, вам нужно написать телеграм-бота, который ищет фильмы и сериалы, и выдаёт ссылки, где их можно посмотреть.
-Также нужно вывести минимальную информацию о фильме/сериале и постер.
+## Build with
 
-Для начала рекомендуем ознакомиться с [API Телеграма](https://core.telegram.org/bots/api).
+* `aiogram`
+* `aiohttp`
+* [`kinopoisk unofficial api`](http://kinopoiskapiunofficial.tech/user)
+* [ivi](ivi.ru), [okko](okko.tv), [baskino](baskino.me), [hdrezka](http://ikinopoisk.com/) search engines
 
-2. Откуда брать информацию о фильмах? А вот это самое интересное - вы можете воспользоваться каким-нибудь готовым API,
-или, например, формировать поисковый запрос и парсить его - решать Вам самим, мы никак вас тут не ограничиваем.
-Можно использовать несколько источников. Для начала можно взять открытую [базу c imdb](https://www.imdb.com/interfaces/)
-(но возможно, это не самое удачное решение, не поленитесь поискать альтернативы, прежде чем брать готовую базу).
+Given the name of movie, bot makes the request to the `kinopoisk unofficial api`, parses `JSON` with description and poster `url` and gives a user a chance to choose the particular film(by maintaining current session state).
 
-Примеры запросов к боту, которые он должен уметь обрабатывать:
-- [Venom]
-- [магия лунного света]
-- [Мстители: война бесконечности]
-- [город в котором меня нет]
+After that, it redirects to online cinema search engines pages.
 
-3. **Важно**: ваш бот должен быть асинхронным. Идея следующая - все сетевые взаимодействия нужно выполнять асинхронно,
-используя [`aiohttp`](https://aiohttp.readthedocs.io/en/stable/#getting-started) вместо `requests`.
+## Usage
+Еhe only thing you need to do is to type the name of movie or TV series:
 
-В качестве библиотеки для работы с API Телеграма, используйте
-[aiogram](https://aiogram.readthedocs.io/en/latest/quick_start.html). В принципе, вы вольны использовать любую другую
-библиотеку на ваш вкус.
+| ![1.jpg](./examples/1.jpg) 	| ![2.jpg](./examples/2.jpg) 	| ![3.jpg](./examples/3.jpg) 	| ![4.jpg](./examples/4.jpg) 	| ![5.jpg](./examples/5.jpg) 	|
+|----------------------------	|----------------------------	|----------------------------	|----------------------------	|----------------------------	|
 
-Для того, чтобы начать писать код, вам должно хватить примеров из документации `aiogram` и `aiohttp`, а более подробно
-про асинхронное программирование мы поговорим на ближайшей лекции.
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-4. Не забудьте поддержать команду */help*, которая поможет нам при тестировании вашего бота.
+Please make sure to update tests as appropriate.
 
-5. Обеспечьте бесперебойную работу бота: можете воспользоваться [AWS](https://aws.amazon.com/free/faqs/), любым
-другим облачным провайдером, или своим собственным сервером, если он у вас есть.
-
-6. Напишите в ReadMe, чем вы воспользовались и какие команды умеет обрабатывать ваш бот, а также примерное
-описание того как он устроен, и его ник в телеграме. **ReadMe вместе с кодом** добавьте в merge-request на гитлабе.
-
-## Замечания
-1. Мы приложили пример простенького бота, который умеет отвечать на фразу собеседника отвечать этой же фразой
-(так называемый echo-bot, hello-world от мира ботов).
-Пример запуска: `BOT_TOKEN=<python> python3 echo_bot_sample.py`
-2. В этом задании нет никаких автоматических тестов: мы проверяем руками, как работает ваш бот.
-Однако вам нужно приложить код, мы кратко оценим его (без code review).
-3. Мы сделали небольшую [инструкцию](https://i.imgur.com/EdH5mIT.jpg) в картинках про то, как снять сервер на AWS.
-Это можно сделать бесплатно на год, если взять самый маленький инстанс.
-4. Если вам понадобится прокся для локального тестирования, можете воспользоваться нашей: пример есть в echo_bot'е
-(нужно поставить дополнительно `aiohttp_socks`).
-Адрес: `socks5://py.manytask.org:1080`, логин и пароль: `student:JGNICRoFHftRqllRh3O0xi0sfbhmLyt7`.
-Пример запуска: `PROXY=<address> PROXY_CREDS=<login:password> BOT_TOKEN=<token> python3 echo_bot_sample.py`
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

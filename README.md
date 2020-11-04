@@ -19,7 +19,7 @@ Given the name of movie, bot makes the request to the `kinopoisk unofficial api`
 After that, it redirects to online cinema search engines pages.
 
 ## Usage
-Еhe only thing you need to do is to type the name of movie or TV series:
+The only thing you need to do is to type the name of movie or TV series:
 
 | ![1.jpg](./examples/1.jpg) 	| ![2.jpg](./examples/2.jpg) 	| ![3.jpg](./examples/3.jpg) 	| ![4.jpg](./examples/4.jpg) 	| ![5.jpg](./examples/5.jpg) 	|
 |----------------------------	|----------------------------	|----------------------------	|----------------------------	|----------------------------	|

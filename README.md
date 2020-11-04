@@ -7,7 +7,7 @@ Cinema Bot is a python Telegram bot, which can help you to find:
 * Info about movie
 * Places to watch a movie
 
-## Build with
+## Built with
 
 * `aiogram`
 * `aiohttp`

@@ -1,4 +1,7 @@
-# Cinema Bot (@cinema_rvg_bot)
+# Cinema Bot ([@cinema_rvg_bot](https://t.me/cinema_rvg_bot))
+
+[![Try it right now](https://img.shields.io/badge/Telegram-Try%20now!-brightgreen?style=plastic&logo=telegram)](https://t.me/cinema_rvg_bot)
+
 
 Cinema Bot is a python Telegram bot, which can help you to find:
 * Info about movie

@@ -1,10 +1,13 @@
-# Cinema Bot (@cinema_rvg_bot)
+# Cinema Bot ([@cinema_rvg_bot](https://t.me/cinema_rvg_bot))
+
+[![Try it right now](https://img.shields.io/badge/Telegram-Try%20now!-brightgreen?&logo=telegram)](https://t.me/cinema_rvg_bot)
+
 
 Cinema Bot is a python Telegram bot, which can help you to find:
 * Info about movie
 * Places to watch a movie
 
-## Build with
+## Built with
 
 * `aiogram`
 * `aiohttp`
@@ -16,7 +19,7 @@ Given the name of movie, bot makes the request to the `kinopoisk unofficial api`
 After that, it redirects to online cinema search engines pages.
 
 ## Usage
-Еhe only thing you need to do is to type the name of movie or TV series:
+The only thing you need to do is to type the name of movie or TV series:
 
 | ![1.jpg](./examples/1.jpg) 	| ![2.jpg](./examples/2.jpg) 	| ![3.jpg](./examples/3.jpg) 	| ![4.jpg](./examples/4.jpg) 	| ![5.jpg](./examples/5.jpg) 	|
 |----------------------------	|----------------------------	|----------------------------	|----------------------------	|----------------------------	|

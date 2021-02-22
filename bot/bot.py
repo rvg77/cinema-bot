@@ -18,8 +18,11 @@ logging.basicConfig(level=logging.INFO)
 login, password = credentials.PROXY_CREDS.split(':')
 proxy_auth = aiohttp.BasicAuth(login=login, password=password)
 # Creating bot
-bot = Bot(token=credentials.API_TOKEN,
-          proxy=credentials.PROXY, proxy_auth=proxy_auth)
+bot = Bot(
+    token=credentials.API_TOKEN,
+    # proxy=credentials.PROXY,
+    # proxy_auth=proxy_auth
+)
 memory_storage = MemoryStorage()
 dp = Dispatcher(bot, storage=memory_storage)
 
